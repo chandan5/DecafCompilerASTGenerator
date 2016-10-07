@@ -1,0 +1,14 @@
+int main() {
+    int a;
+    int b[20];
+    bool x[100];;
+    a = a;;
+  //  a[1000] = a + b;
+   // b[0] = a + a;
+}
+/*
+int i1;
+boolean b1;
+b1 = true;
+i1 = 123;
+*/

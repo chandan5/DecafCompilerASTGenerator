@@ -1,0 +1,16 @@
+<program>
+<declarations count="3">
+<declaration name="a" type="integer" />
+<declaration name="b" type="integer" size="20" />
+<declaration name="x" type="boolean" size="100" />
+</declarations>
+<statements count="1">
+<assignmnet>
+<LHS name="a">
+</LHS>
+<RHS>
+<identifier name="a" />
+</RHS>
+</assignmnet>
+</statements>
+</program>
