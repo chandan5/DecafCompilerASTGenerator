@@ -1,0 +1,136 @@
+<program>
+	<declarations count="4">
+		<declaration name="x" type="integer" />
+		<declaration name="a" type="integer" size="4" />
+		<declaration name="y" type="boolean" />
+		<declaration name="y" type="boolean" size="10" />
+	</declarations>
+	<statements count="4">
+		<assignment>
+			<LHS name="foo">
+				<integer value="2" />
+			</LHS>
+			<RHS>
+				<binary_expression type="Addition">
+					<identifier name="foo">
+						<integer value="3" />
+					</identifier>
+					<binary_expression type="Multiplication">
+						<identifier name="foo">
+							<integer value="4" />
+						</identifier>
+						<identifier name="foo">
+							<integer value="5" />
+						</identifier>
+					</binary_expression>
+				</binary_expression>
+			</RHS>
+		</assignment>
+		<assignment>
+			<LHS name="num">
+			</LHS>
+			<RHS>
+				<binary_expression type="Addition">
+					<identifier name="num" />
+					<binary_expression type="Addition">
+						<binary_expression type="Multiplication">
+							<identifier name="num" />
+							<identifier name="f4o">
+								<binary_expression type="Division">
+									<integer value="4" />
+									<integer value="2" />
+								</binary_expression>
+							</identifier>
+						</binary_expression>
+						<binary_expression type="Multiplication">
+							<identifier name="num" />
+							<binary_expression type="Multiplication">
+								<identifier name="num" />
+								<identifier name="dFg" />
+							</binary_expression>
+						</binary_expression>
+					</binary_expression>
+				</binary_expression>
+			</RHS>
+		</assignment>
+		<assignment>
+			<LHS name="foo">
+				<binary_expression type="Division">
+					<boolean value="true" />
+					<boolean value="false" />
+				</binary_expression>
+			</LHS>
+			<RHS>
+				<binary_expression type="Addition">
+					<boolean value="true" />
+					<binary_expression type="Modulus">
+						<boolean value="true" />
+						<boolean value="false" />
+					</binary_expression>
+				</binary_expression>
+			</RHS>
+		</assignment>
+		<assignment>
+			<LHS name="x">
+				<binary_expression type="Addition">
+					<binary_expression type="Division">
+						<integer value="10" />
+						<identifier name="y">
+							<integer value="10" />
+						</identifier>
+					</binary_expression>
+					<binary_expression type="Addition">
+						<integer value="4" />
+						<binary_expression type="Multiplication">
+							<integer value="5" />
+							<identifier name="fg">
+								<integer value="10" />
+							</identifier>
+						</binary_expression>
+					</binary_expression>
+				</binary_expression>
+			</LHS>
+			<RHS>
+				<binary_expression type="Addition">
+					<binary_expression type="Multiplication">
+						<integer value="4" />
+						<binary_expression type="Addition">
+							<integer value="5" />
+							<binary_expression type="Multiplication">
+								<integer value="12" />
+								<identifier name="df">
+									<binary_expression type="Division">
+										<integer value="10" />
+										<integer value="0" />
+									</binary_expression>
+								</identifier>
+							</binary_expression>
+						</binary_expression>
+					</binary_expression>
+					<identifier name="gh">
+						<binary_expression type="Modulus">
+							<binary_expression type="Multiplication">
+								<binary_expression type="Addition">
+									<integer value="10" />
+									<integer value="1" />
+								</binary_expression>
+								<identifier name="gh">
+									<binary_expression type="Addition">
+										<binary_expression type="Division">
+											<integer value="10" />
+											<identifier name="fg">
+												<integer value="10" />
+											</identifier>
+										</binary_expression>
+										<integer value="19" />
+									</binary_expression>
+								</identifier>
+							</binary_expression>
+							<identifier name="MOD" />
+						</binary_expression>
+					</identifier>
+				</binary_expression>
+			</RHS>
+		</assignment>
+	</statements>
+</program>

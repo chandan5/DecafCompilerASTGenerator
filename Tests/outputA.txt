@@ -1,0 +1,73 @@
+<program>
+	<declarations count="4">
+		<declaration name="size" type="integer" />
+		<declaration name="ar" type="boolean" size="2" />
+		<declaration name="la" type="integer" />
+		<declaration name="pa" type="integer" />
+	</declarations>
+	<statements count="6">
+		<assignment>
+			<LHS name="ar">
+				<integer value="0" />
+			</LHS>
+			<RHS>
+				<boolean value="true" />
+			</RHS>
+		</assignment>
+		<assignment>
+			<LHS name="ar">
+				<integer value="1" />
+			</LHS>
+			<RHS>
+				<boolean value="false" />
+			</RHS>
+		</assignment>
+		<assignment>
+			<LHS name="size">
+			</LHS>
+			<RHS>
+				<integer value="4" />
+			</RHS>
+		</assignment>
+		<assignment>
+			<LHS name="pa">
+			</LHS>
+			<RHS>
+				<binary_expression type="Division">
+					<binary_expression type="Addition">
+						<integer value="5" />
+						<identifier name="size" />
+					</binary_expression>
+					<integer value="3" />
+				</binary_expression>
+			</RHS>
+		</assignment>
+		<assignment>
+			<LHS name="la">
+			</LHS>
+			<RHS>
+				<binary_expression type="Modulus">
+					<identifier name="pa" />
+					<identifier name="size" />
+				</binary_expression>
+			</RHS>
+		</assignment>
+		<assignment>
+			<LHS name="la">
+			</LHS>
+			<RHS>
+				<binary_expression type="Addition">
+					<identifier name="la" />
+					<binary_expression type="Multiplication">
+						<identifier name="ar">
+							<integer value="0" />
+						</identifier>
+						<identifier name="ar">
+							<integer value="1" />
+						</identifier>
+					</binary_expression>
+				</binary_expression>
+			</RHS>
+		</assignment>
+	</statements>
+</program>
