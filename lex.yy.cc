@@ -513,11 +513,9 @@ char *yytext;
 #include "Assignment3.tab.hh"
 #define YY_DECL extern "C" int yylex()
 
-
-
-int error_count = 0;
+extern int error_count;
 //ofstream flexoutfile;
-#line 521 "lex.yy.cc"
+#line 519 "lex.yy.cc"
 
 #define INITIAL 0
 
@@ -699,9 +697,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 19 "Assignment3.l"
+#line 17 "Assignment3.l"
 
-#line 705 "lex.yy.cc"
+#line 703 "lex.yy.cc"
 
 	if ( !(yy_init) )
 		{
@@ -797,7 +795,7 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 20 "Assignment3.l"
+#line 18 "Assignment3.l"
 {
 
 };
@@ -805,7 +803,7 @@ YY_RULE_SETUP
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 23 "Assignment3.l"
+#line 21 "Assignment3.l"
 {
 
 }
@@ -813,14 +811,14 @@ YY_RULE_SETUP
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
-#line 26 "Assignment3.l"
+#line 24 "Assignment3.l"
 {
 
 }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 30 "Assignment3.l"
+#line 28 "Assignment3.l"
 {
     yylval.ival = atoi(yytext);
     return INT_VALUE;
@@ -828,42 +826,42 @@ YY_RULE_SETUP
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 34 "Assignment3.l"
+#line 32 "Assignment3.l"
 {
     return INT;
 }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 37 "Assignment3.l"
+#line 35 "Assignment3.l"
 {
     return BOOLEAN;
 }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 40 "Assignment3.l"
+#line 38 "Assignment3.l"
 {
     return TRUE;
 }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 43 "Assignment3.l"
+#line 41 "Assignment3.l"
 {
     return FALSE;
 }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 46 "Assignment3.l"
+#line 44 "Assignment3.l"
 {
     return MAIN;
 }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 49 "Assignment3.l"
+#line 47 "Assignment3.l"
 {
     yylval.sval = strdup(yytext);
     return IDENTIFIER;
@@ -871,106 +869,106 @@ YY_RULE_SETUP
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 53 "Assignment3.l"
+#line 51 "Assignment3.l"
 {
     return OPEN_SQUAREBRACKET;
 }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 56 "Assignment3.l"
+#line 54 "Assignment3.l"
 {
     return CLOSE_SQUAREBRACKET;
 }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 59 "Assignment3.l"
+#line 57 "Assignment3.l"
 {
     return OPEN_CURLYBRACE;
 }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 62 "Assignment3.l"
+#line 60 "Assignment3.l"
 {
     return CLOSE_CURLYBRACE;
 }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 65 "Assignment3.l"
+#line 63 "Assignment3.l"
 {
     return OPEN_PARANTHESIS;
 }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 68 "Assignment3.l"
+#line 66 "Assignment3.l"
 {
     return CLOSE_PARANTHESIS;
 }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 71 "Assignment3.l"
+#line 69 "Assignment3.l"
 {
     return EQUAL;
 }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 74 "Assignment3.l"
+#line 72 "Assignment3.l"
 {
     return PLUS;
 }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 77 "Assignment3.l"
+#line 75 "Assignment3.l"
 {
     return MINUS;
 }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 80 "Assignment3.l"
+#line 78 "Assignment3.l"
 {
     return MULTIPLY;
 }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 83 "Assignment3.l"
+#line 81 "Assignment3.l"
 {
     return DIVIDE;
 }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 86 "Assignment3.l"
+#line 84 "Assignment3.l"
 {
     return MODULO;
 }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 89 "Assignment3.l"
+#line 87 "Assignment3.l"
 {
     return SEMICOLON;
 }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 92 "Assignment3.l"
+#line 90 "Assignment3.l"
 {++error_count;}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 93 "Assignment3.l"
+#line 91 "Assignment3.l"
 ECHO;
 	YY_BREAK
-#line 974 "lex.yy.cc"
+#line 972 "lex.yy.cc"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1979,7 +1977,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 93 "Assignment3.l"
+#line 91 "Assignment3.l"
 
 
 

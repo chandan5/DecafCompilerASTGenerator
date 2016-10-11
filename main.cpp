@@ -6,6 +6,7 @@ extern "C" FILE *yyin;
 extern "C" int yyparse();
 
 ASTProgram * astRoot;
+int error_count = 0;
 
 using namespace std;
 
@@ -31,17 +32,20 @@ int main(int argc, char*argv[]) {
     do {
         yyparse();
     } while (!feof(yyin));
+    if(error_count) {
+        cout << "Syntax error" << endl;
+    }
+    else {
+        cout << "Success" << endl;
 
-    cout << "Success" << endl;
+        ofstream out("XML_visitor.txt");
+        streambuf *coutbuf = std::cout.rdbuf(); //save old buf
+        cout.rdbuf(out.rdbuf()); //redirect std::cout to XML_visitor.txt!
 
-    ofstream out("XML_visitor.txt");
-    streambuf *coutbuf = std::cout.rdbuf(); //save old buf
-    cout.rdbuf(out.rdbuf()); //redirect std::cout to XML_visitor.txt!
+        PrintVisitor * printVisitor = new PrintVisitor(astRoot);
+        printVisitor->print();
 
-    PrintVisitor * printVisitor = new PrintVisitor(astRoot);
-    printVisitor->print();
-
-    cout.rdbuf(coutbuf); //reset to standard output again
-
+        cout.rdbuf(coutbuf); //reset to standard output again
+    }
     return 0;
 }

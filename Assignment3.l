@@ -5,9 +5,7 @@
 #include "Assignment3.tab.hh"
 #define YY_DECL extern "C" int yylex()
 
-
-
-int error_count = 0;
+extern int error_count;
 //ofstream flexoutfile;
 %}
 
